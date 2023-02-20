@@ -4,7 +4,7 @@ import { decrement, increment } from '../redux/counter/actions';
 
 // Higher order component
 // A Higher order component is a function that takes a component as parameter and returns a new component
-
+// const newComponent = HOC(component);
 
 const Counter = ({count}) => {
 
