@@ -5,7 +5,8 @@ const initialState = [
     {
         id: 1,
         text: 'Learn React.js',
-        completed: true
+        completed: true,
+        color: 'green'
     },
     {
         id: 2,
