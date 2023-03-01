@@ -41,24 +41,6 @@
       "completed": true,
       "id": 7,
       "color": "green"
-    },
-    {
-      "text": "Test",
-      "completed": false,
-      "id": 8,
-      "color": "green"
-    },
-    {
-      "text": "hdjhdjhdjsdh",
-      "completed": false,
-      "id": 9,
-      "color": "green"
-    },
-    {
-      "text": "Ok",
-      "completed": false,
-      "id": 10,
-      "color": "green"
     }
   ]
 }
