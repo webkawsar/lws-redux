@@ -22,7 +22,7 @@ const delayActionMiddleware = (store) => (next) => (action) => {
 const fetchAsyncMiddleware = (store) => (next) => async (action) => {
     
     if(typeof action === 'function') {
-        return action(store);
+        return action(store.dispatch, store.getState);
     }
 
     return next(action);
