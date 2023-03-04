@@ -6,7 +6,7 @@ const { dynamicCounterActions } = require("./rtk/features/dynamicCounter/dynamic
 
 // subscribe o state changes
 store.subscribe(() => {
-    console.log(store.getState());
+    // console.log(store.getState());
 })
 
 
