@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const VideoGridItem = ({video}) => {
-  const { id, title, author, avatar, thumbnail, views, date, duration, link } = video;
+  const { id, title, author, avatar, thumbnail, views, date, duration } = video;
 
   
   return (
