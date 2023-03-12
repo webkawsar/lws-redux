@@ -1,16 +1,112 @@
 {
-    "transactions": [
-        {
-            "id": 1,
-            "name": "Salary from Google",
-            "type": "income",
-            "amount": 1000000
-        },
-        {
-            "id": 2,
-            "name": "Family Expenses",
-            "type": "expense",
-            "amount": 200000
-        }
-    ]
+  "transactions": [
+    {
+      "id": 1,
+      "name": "Salary from Google",
+      "type": "income",
+      "amount": 1000000
+    },
+    {
+      "id": 2,
+      "name": "Family Expenses",
+      "type": "expense",
+      "amount": 200000
+    },
+    {
+      "name": "Hate Kolome JavaScript",
+      "type": "expense",
+      "amount": "300",
+      "id": 3
+    },
+    {
+      "name": "Hate Kolome JavaScript",
+      "type": "income",
+      "amount": "200",
+      "id": 4
+    },
+    {
+      "name": "Hate Kolome JavaScript",
+      "type": "income",
+      "amount": "200",
+      "id": 5
+    },
+    {
+      "name": "Hate Kolome JavaScript",
+      "type": "income",
+      "amount": "200",
+      "id": 6
+    },
+    {
+      "name": "Hate Kolome JavaScript",
+      "type": "income",
+      "amount": "22",
+      "id": 7
+    },
+    {
+      "name": "Hate Kolome JavaScript",
+      "type": "income",
+      "amount": "22",
+      "id": 8
+    },
+    {
+      "name": "Hate Kolome JavaScript",
+      "type": "income",
+      "amount": "200",
+      "id": 9
+    },
+    {
+      "name": "Hate Kolome JavaScript",
+      "type": "income",
+      "amount": "11",
+      "id": 10
+    },
+    {
+      "name": "Hate Kolome JavaScript",
+      "type": "income",
+      "amount": "11",
+      "id": 11
+    },
+    {
+      "name": "Hate Kolome JavaScript",
+      "type": "income",
+      "amount": "300",
+      "id": 12
+    },
+    {
+      "name": "Hate Kolome JavaScript",
+      "type": "income",
+      "amount": "300",
+      "id": 13
+    },
+    {
+      "name": "Hate Kolome JavaScript",
+      "type": "income",
+      "amount": "300",
+      "id": 14
+    },
+    {
+      "name": "Hate Kolome JavaScript",
+      "type": "income",
+      "amount": "300",
+      "id": 15
+    },
+    {
+      "name": "Kawsar",
+      "type": "expense",
+      "amount": "200",
+      "id": 16
+    },
+    {
+      "name": "Kawsar",
+      "type": "expense",
+      "amount": "5",
+      "id": 17
+    },
+    {
+      "name": "Hate Kolome JavaScript",
+      "type": "expense",
+      "amount": "47",
+      "id": 18
+    }
+  ]
 }
