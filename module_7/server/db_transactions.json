@@ -11,12 +11,6 @@
       "name": "Family Expenses",
       "type": "expense",
       "amount": 200000
-    },
-    {
-      "name": "Hate Kolome JavaScript",
-      "type": "expense",
-      "amount": "300",
-      "id": 3
     }
   ]
 }
