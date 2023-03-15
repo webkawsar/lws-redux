@@ -24,7 +24,7 @@ export default function Videos() {
       </>
     );
   }
-  if (isError) content = <Error message={error} />;
+  if (isError) content = <Error message={error.message} />;
   if (isSuccess && videos?.length === 0) {
     content = <Error message="No Videos Found!" />;
   }
