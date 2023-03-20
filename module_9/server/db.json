@@ -2,30 +2,18 @@
   "users": [
     {
       "email": "web.kawsarahmed@gmail.com",
-      "password": "$2a$10$l27v3gNP7cFlIlLfBAwYEeRoSj1zSDYdpoAuaD2yobVmCdzEAjyRO",
+      "password": "$2a$10$YQZn8b09FpY62x.dh0old.Z7etPqBArg7Mswj61ZlWvV8XQmMKjz.",
       "fullName": "Kawsar Ahmed",
       "id": 1
-    },
-    {
-      "email": "web.kawsarahmed1@gmail.com",
-      "password": "$2a$10$OWjpQHOjlfyrpkPhmbYSS.uBJ9j1wdOBgsrckJzLKUNP5BfCuqdrW",
-      "fullName": "Kawsar Ahmed",
-      "id": 2
-    },
-    {
-      "email": "web.kawsarahmed2@gmail.com",
-      "password": "$2a$10$7tZv5V1vgb2NNsGe1mhWMOhfTv9T/3U7YS0MC.apvdqOgCrqNiXeG",
-      "fullName": "Kawsar Ahmed",
-      "id": 3
     }
   ],
   "conversations": [
     {
       "id": 1,
-      "participants": "sumit@learnwithsumit.com-akash@learnwithsumit.com",
+      "participants": "web.kawsarahmed@gmail.com-akash@learnwithsumit.com",
       "users": [
         {
-          "email": "sumit@learnwithsumit.com",
+          "email": "web.kawsarahmed@gmail.com",
           "name": "Sumit Saha",
           "id": 1
         },
@@ -40,10 +28,10 @@
     },
     {
       "id": 2,
-      "participants": "sumit@learnwithsumit.com-saad@learnwithsumit.com",
+      "participants": "web.kawsarahmed@gmail.com-saad@learnwithsumit.com",
       "users": [
         {
-          "email": "sumit@learnwithsumit.com",
+          "email": "web.kawsarahmed@gmail.com",
           "name": "Sumit Saha",
           "id": 1
         },
@@ -62,7 +50,7 @@
       "id": 1,
       "conversationId": 1,
       "sender": {
-        "email": "sumit@learnwithsumit.com",
+        "email": "web.kawsarahmed@gmail.com",
         "name": "Sumit Saha",
         "id": 1
       },
@@ -83,7 +71,7 @@
         "id": 2
       },
       "receiver": {
-        "email": "sumit@learnwithsumit.com",
+        "email": "web.kawsarahmed@gmail.com",
         "name": "Sumit Saha",
         "id": 1
       },
