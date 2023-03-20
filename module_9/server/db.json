@@ -11,6 +11,12 @@
       "password": "$2a$10$OWjpQHOjlfyrpkPhmbYSS.uBJ9j1wdOBgsrckJzLKUNP5BfCuqdrW",
       "fullName": "Kawsar Ahmed",
       "id": 2
+    },
+    {
+      "email": "web.kawsarahmed2@gmail.com",
+      "password": "$2a$10$7tZv5V1vgb2NNsGe1mhWMOhfTv9T/3U7YS0MC.apvdqOgCrqNiXeG",
+      "fullName": "Kawsar Ahmed",
+      "id": 3
     }
   ],
   "conversations": [

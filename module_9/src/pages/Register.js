@@ -5,17 +5,15 @@ import Error from "../components/ui/Error";
 import { useRegisterMutation } from "../features/auth/authAPI";
 
 export default function Register() {
-  const initialData = {
+  const [inputData, setInputData] = useState({
     fullName: "",
     email: "",
     password: "",
     confirmPassword: "",
     agreed: false,
-  };
-  const [inputData, setInputData] = useState(initialData);
+  });
   const [submitError, setSubmitError] = useState("");
-  const [register, { data, isLoading, isSuccess, isError, error }] =
-    useRegisterMutation();
+  const [register, { data, isLoading, error }] = useRegisterMutation();
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -50,15 +48,13 @@ export default function Register() {
   };
 
   useEffect(() => {
-
-    if(error?.data) {
+    if (error?.data) {
       setSubmitError(error?.data);
     }
-    
-    if(data?.accessToken && data?.user) {
-      navigate('/inbox');
-    }
 
+    if (data?.accessToken && data?.user) {
+      navigate("/inbox");
+    }
   }, [data, error, navigate]);
 
   const { fullName, email, password, confirmPassword, agreed } = inputData;
@@ -182,7 +178,7 @@ export default function Register() {
             </div>
           </form>
 
-          {submitError && submitError !== "" && <Error message={submitError} />}
+          {submitError !== "" && <Error message={submitError} />}
         </div>
       </div>
     </div>
