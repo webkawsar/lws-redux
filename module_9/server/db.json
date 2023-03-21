@@ -2,81 +2,37 @@
   "users": [
     {
       "email": "web.kawsarahmed@gmail.com",
-      "password": "$2a$10$YQZn8b09FpY62x.dh0old.Z7etPqBArg7Mswj61ZlWvV8XQmMKjz.",
+      "password": "$2a$10$EuQRBKocpiD6ciE3UXd/EOyGa1EeDVkGYHzkqk3bMiLL7MtoD7Nr.",
       "fullName": "Kawsar Ahmed",
       "id": 1
+    },
+    {
+      "email": "imran@gmail.com",
+      "password": "$2a$10$gQkpjwYT3cyM/Qt.1rNl..WdgwnpQvwy6Dgh0aLZr0OtQx4mfObfy",
+      "fullName": "Imran Ahmed",
+      "id": 2
     }
   ],
   "conversations": [
     {
-      "id": 1,
-      "participants": "web.kawsarahmed@gmail.com-akash@learnwithsumit.com",
+      "participants": "web.kawsarahmed@gmail.com-imran@gmail.com",
       "users": [
         {
           "email": "web.kawsarahmed@gmail.com",
-          "name": "Sumit Saha",
+          "fullName": "Kawsar Ahmed",
           "id": 1
         },
         {
-          "email": "akash@learnwithsumit.com",
-          "name": "Akash Ahmed",
+          "email": "imran@gmail.com",
+          "password": "$2a$10$gQkpjwYT3cyM/Qt.1rNl..WdgwnpQvwy6Dgh0aLZr0OtQx4mfObfy",
+          "fullName": "Imran Ahmed",
           "id": 2
         }
       ],
-      "message": "How are you?",
-      "timestamp": 1661976143678
-    },
-    {
-      "id": 2,
-      "participants": "web.kawsarahmed@gmail.com-saad@learnwithsumit.com",
-      "users": [
-        {
-          "email": "web.kawsarahmed@gmail.com",
-          "name": "Sumit Saha",
-          "id": 1
-        },
-        {
-          "email": "akash@learnwithsumit.com",
-          "name": "Saad Hasan",
-          "id": 3
-        }
-      ],
-      "message": "How are you?",
-      "timestamp": 1661976143678
+      "message": "Hello Imran vai\n",
+      "timestamp": 1679377121960,
+      "id": 1
     }
   ],
-  "messages": [
-    {
-      "id": 1,
-      "conversationId": 1,
-      "sender": {
-        "email": "web.kawsarahmed@gmail.com",
-        "name": "Sumit Saha",
-        "id": 1
-      },
-      "receiver": {
-        "email": "akash@learnwithsumit.com",
-        "name": "Akash Ahmed",
-        "id": 2
-      },
-      "message": "Hello",
-      "timestamp": 1661976143557
-    },
-    {
-      "id": 2,
-      "conversationId": 1,
-      "sender": {
-        "email": "akash@learnwithsumit.com",
-        "name": "Akash Ahmed",
-        "id": 2
-      },
-      "receiver": {
-        "email": "web.kawsarahmed@gmail.com",
-        "name": "Sumit Saha",
-        "id": 1
-      },
-      "message": "How are you?",
-      "timestamp": 1661976143678
-    }
-  ]
+  "messages": []
 }
