@@ -19,21 +19,26 @@ export default function ChatItems() {
 
   // decide what to render
   let content = null;
-  if (isLoading) content = <li className="m-2 text-center">Loading....</li>;
+  if (isLoading) {
+    content = <li className="m-2 text-center">Loading....</li>
+  }
+  
   if (isError) {
     content = (
       <li className="m-2 text-center">
-        <Error message={error?.data} />
+        <Error message={error?.data ?? "Something went wrong!"} />
       </li>
     );
   }
+
   if (isSuccess && conversations.length === 0) {
     content = <li className="m-2 text-center">No conversations found!</li>;
   }
+  
   if (isSuccess && conversations.length) {
     content = conversations.map((conversation) => {
       const { id, message, timestamp } = conversation;
-      const { name, email } = getPartnerInfo(conversation?.users, user?.email);
+      const { fullName, email } = getPartnerInfo(conversation?.users, user?.email);
 
       return (
         <li key={id}>
@@ -42,7 +47,7 @@ export default function ChatItems() {
               avatar={gravatarUrl(email, {
                 size: 80,
               })}
-              name={name}
+              name={fullName}
               lastMessage={message}
               lastTime={moment(timestamp).fromNow()}
             />

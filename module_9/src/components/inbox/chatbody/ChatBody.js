@@ -18,22 +18,27 @@ export default function ChatBody() {
 
   // decide what to render
   let content = null;
-  if (isLoading) content = <div>Loading....</div>;
-  if (isError)
+  if (isLoading) {
+    content = <div>Loading....</div>
+  }
+  
+  if (isError) {
     content = (
       <div>
-        <Error message={error?.data} />
+        <Error message={error?.data ?? "Something went wrong!"} />
       </div>
-    );
-  if (isSuccess && messages.length === 0) {
-    content = <div className="p-5 text-center">No conversations found!</div>;
+    )
   }
+    
+  if (isSuccess && messages.length === 0) {
+    content = <div className="p-5 text-center">No messages found!</div>;
+  }
+  
   if (isSuccess && messages.length) {
     content = (
       <>
         <ChatHead
-          avatar="https://cdn.pixabay.com/photo/2018/01/15/07/51/woman-3083383__340.jpg"
-          name="Akash Ahmed"
+          message={messages[0]}
         />
         <Messages messages={messages} />
         <Options />
@@ -45,7 +50,6 @@ export default function ChatBody() {
     <div className="w-full lg:col-span-2 lg:block">
       <div className="w-full grid conversation-row-grid">
         {content}
-        {/* <Blank /> */}
       </div>
     </div>
   );

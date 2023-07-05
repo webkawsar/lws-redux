@@ -1,16 +1,16 @@
 {
   "users": [
     {
-      "email": "web.kawsarahmed@gmail.com",
-      "password": "$2a$10$EuQRBKocpiD6ciE3UXd/EOyGa1EeDVkGYHzkqk3bMiLL7MtoD7Nr.",
-      "fullName": "Kawsar Ahmed",
-      "id": 1
-    },
-    {
       "email": "imran@gmail.com",
       "password": "$2a$10$gQkpjwYT3cyM/Qt.1rNl..WdgwnpQvwy6Dgh0aLZr0OtQx4mfObfy",
       "fullName": "Imran Ahmed",
       "id": 2
+    },
+    {
+      "email": "web.kawsarahmed@gmail.com",
+      "password": "$2a$10$GkdUm3CN2ho2MJapgSjEnuK36EKoeTMqAz.7VTKNJ34Z3cCFqcbAq",
+      "fullName": "Kawsar Ahmed",
+      "id": 3
     }
   ],
   "conversations": [
