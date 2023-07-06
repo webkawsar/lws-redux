@@ -6,7 +6,7 @@ export default function ChatHead({message}) {
     const { user } = useSelector(state => state.auth);
     const {sender, receiver} = message;
     const partnerEmail = sender?.email === user?.email ? receiver?.email : sender?.email;
-    const partnerName = sender?.email === user?.email ? receiver?.name : sender?.name;
+    const partnerName = sender?.email === user?.email ? receiver?.fullName : sender?.fullName;
 
     return (
         <div className="relative flex items-center p-3 border-b border-gray-300">

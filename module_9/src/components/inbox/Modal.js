@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { conversationsAPI, useAddConversationMutation, useEditConversationMutation } from "../../features/conversations/conversationsAPI";
+import {
+  conversationsAPI,
+  useAddConversationMutation,
+  useEditConversationMutation,
+} from "../../features/conversations/conversationsAPI";
 import { useGetUserQuery } from "../../features/users/usersAPI";
 import isValidEmail from "../../utils/isValidEmail";
 import Error from "../ui/Error";
@@ -15,9 +19,10 @@ export default function Modal({ open, control }) {
   const { user } = useSelector((state) => state.auth) || {};
   const dispatch = useDispatch();
   const [conversation, setConversation] = useState(undefined);
-  const [addConversation, {isSuccess: isAddConversationSuccess}] = useAddConversationMutation();
-  const [editConversation, {isSuccess: isEditConversationSuccess}] = useEditConversationMutation();
-  
+  const [addConversation, { isSuccess: isAddConversationSuccess }] =
+    useAddConversationMutation();
+  const [editConversation, { isSuccess: isEditConversationSuccess }] =
+    useEditConversationMutation();
 
   const debounceHandler = (fn, delay) => {
     let timeoutId;
@@ -62,37 +67,38 @@ export default function Modal({ open, control }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if(conversation?.length > 0) {
-        // edit conversation
-        editConversation({
-            id: conversation[0].id,
-            data: {
-                participants: `${user?.email}-${participant[0].email}`,
-                users: [user, participant[0]],
-                message,
-                timestamp: new Date().getTime()
-            }
-        })
-
-    } else if(conversation?.length === 0) {
-        // add conversation
-        addConversation({
-            participants: `${user?.email}-${participant[0].email}`,
-            users: [user, participant[0]],
-            message,
-            timestamp: new Date().getTime()
-        })
+    if (conversation?.length > 0) {
+      // edit conversation
+      editConversation({
+        id: conversation[0].id,
+        sender: user?.email,
+        data: {
+          participants: `${user?.email}-${participant[0].email}`,
+          users: [user, participant[0]],
+          message,
+          timestamp: new Date().getTime(),
+        },
+      });
+    } else if (conversation?.length === 0) {
+      // add conversation
+      addConversation({
+        sender: user?.email,
+        data: {
+          participants: `${user?.email}-${participant[0].email}`,
+          users: [user, participant[0]],
+          message,
+          timestamp: new Date().getTime(),
+        },
+      });
     }
-
   };
 
   useEffect(() => {
-
-    if(isAddConversationSuccess || isEditConversationSuccess) {
-        control()
+    if (isAddConversationSuccess || isEditConversationSuccess) {
+      control();
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isAddConversationSuccess, isEditConversationSuccess])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isAddConversationSuccess, isEditConversationSuccess]);
 
   return (
     open && (
