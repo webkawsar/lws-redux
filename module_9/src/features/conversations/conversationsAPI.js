@@ -47,27 +47,40 @@ export const conversationsAPI = apiSlice.injectEndpoints({
         method: "PATCH",
         body: data,
       }),
-      async onQueryStarted(arg, {dispatch, queryFulfilled}) {
+      async onQueryStarted({id, sender, data}, {dispatch, queryFulfilled}) {
+        // optimistic cache update start
+        const pathResult = dispatch(apiSlice.util.updateQueryData('getConversations', sender, (draft) => {
+          const draftConversation = draft.find(c => c.id == id);
+          draftConversation.message = data.message;
+          draftConversation.timestamp = data.timestamp;
+        }))
+        // optimistic cache update end
+
         try {
 
           const conversation = await queryFulfilled;
           if(conversation?.data?.id) {
             // silent entry to message table
-            const users = arg.data.users;
-            const senderUser = users.find(user =>user.email === arg.sender);
-            const receiverUser = users.find(user =>user.email !== arg.sender);
+            const users = data.users;
+            const senderUser = users.find(user =>user.email === sender);
+            const receiverUser = users.find(user =>user.email !== sender);
 
-            dispatch(messagesAPI.endpoints.addMessage.initiate({
+            const res = await dispatch(messagesAPI.endpoints.addMessage.initiate({
               conversationId: conversation?.data?.id,
               sender: senderUser,
               receiver: receiverUser,
-              message: arg.data.message,
-              timestamp: arg.data.timestamp
+              message: data.message,
+              timestamp: data.timestamp
+            })).unwrap()
+
+            dispatch(apiSlice.util.updateQueryData('getMessages', res?.conversationId.toString(), (draft) => {
+              draft.push(res);
             }))
+
           }
           
         } catch (error) {
-          
+          pathResult.undo();
         }
       }
     }),
