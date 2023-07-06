@@ -35,28 +35,9 @@
           "id": 3
         }
       ],
-      "message": "okey",
-      "timestamp": 1688607528955,
+      "message": "go ahead",
+      "timestamp": 1688611053737,
       "id": 1
-    },
-    {
-      "participants": "web.kawsarahmed@gmail.com-samim@gmail.com",
-      "users": [
-        {
-          "email": "web.kawsarahmed@gmail.com",
-          "fullName": "Kawsar Ahmed",
-          "id": 1
-        },
-        {
-          "email": "samim@gmail.com",
-          "password": "$2a$10$YKp5Y3DrWlTSKz5ZpmPKp.KoF7NrF.u550un6C7Z4KZwCHzgxWaLe",
-          "fullName": "Samim Mohammad",
-          "id": 2
-        }
-      ],
-      "message": "Hello, pilot sab",
-      "timestamp": 1688605166174,
-      "id": 2
     }
   ],
   "messages": [
@@ -73,9 +54,43 @@
         "fullName": "Imran Ahmed",
         "id": 3
       },
-      "message": "okey",
-      "timestamp": 1688607528955,
+      "message": "Hi",
+      "timestamp": 1688610538442,
       "id": 1
+    },
+    {
+      "conversationId": 1,
+      "sender": {
+        "email": "web.kawsarahmed@gmail.com",
+        "fullName": "Kawsar Ahmed",
+        "id": 1
+      },
+      "receiver": {
+        "email": "imran@gmail.com",
+        "password": "$2a$10$xDtAUWXWeU8me4Bd.9U/..6aQSkmVHs9RRQn48FZF3MbbXzMKabSW",
+        "fullName": "Imran Ahmed",
+        "id": 3
+      },
+      "message": "Okey",
+      "timestamp": 1688611042586,
+      "id": 2
+    },
+    {
+      "conversationId": 1,
+      "sender": {
+        "email": "web.kawsarahmed@gmail.com",
+        "fullName": "Kawsar Ahmed",
+        "id": 1
+      },
+      "receiver": {
+        "email": "imran@gmail.com",
+        "password": "$2a$10$xDtAUWXWeU8me4Bd.9U/..6aQSkmVHs9RRQn48FZF3MbbXzMKabSW",
+        "fullName": "Imran Ahmed",
+        "id": 3
+      },
+      "message": "go ahead",
+      "timestamp": 1688611053737,
+      "id": 3
     }
   ]
 }
